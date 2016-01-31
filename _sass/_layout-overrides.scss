@@ -1,0 +1,127 @@
+.post-meta {
+    font-family: monospace;
+    text-overflow: ellipsis;
+}
+.post-header .post-meta {
+    float: right;
+    text-align: right;
+
+    time {
+        display: block;
+    }
+}
+
+
+
+.site-footer {
+    padding: $spacing-unit / 2 0 0;
+}
+.footer-col-1 {
+    width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+    width:         calc(60% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
+    text-align: center;
+}
+
+.footer-col-3 {
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
+    text-align: right;
+}
+
+@include media-query($on-laptop) {
+    .footer-col-1 {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+        text-align: initial;
+    }
+
+    .footer-col-2,
+    .footer-col-3 {
+        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        width:         calc(50% - (#{$spacing-unit} / 2));
+        text-align: initial;
+    }
+}
+
+@include media-query($on-palm) {
+    .footer-col {
+        text-align: initial;
+    }
+}
+
+
+
+
+/**
+ * Lyrics & Poems
+ */
+.lyric .post-content,
+.poem .post-content {
+    font-family: monospace;
+    white-space: pre;
+
+    /* Undo margin caused by <p> tag around lines. */
+    p {
+        margin: -1em 0;
+    }
+
+    /* Undo vertical space caused my newlines before getting to <p> tags. */
+    margin: -3em 0 -2em 0
+}
+
+
+
+/**
+ * Books
+ */
+.book .post-content p {
+    text-indent: 2em;
+}
+
+
+
+.post-reason {
+    border: 1px solid $grey-color;
+    color: $grey-color;
+    float: right;
+    font-size: $small-font-size;
+    margin: 1em 0px 1em 2em;
+    padding: 1em;
+    width: 33%;
+
+    /* Undo text settings for poems. */
+    font-family: initial;
+    white-space: normal;
+}
+
+
+
+.post-list {
+    li {
+        border: 1px solid $grey-color-light;
+        &:hover {
+            background-color: $grey-color-light;
+            border: 1px solid $grey-color-dark;
+        }
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        .post-meta {
+            position: relative;
+            bottom: .5em;
+        }
+
+        .fa {
+            float: left;
+            margin: 6px 21px 0 6px;
+        }
+    }
+}
+

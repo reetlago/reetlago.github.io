@@ -4,16 +4,24 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Catalog</h1>
 
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% include icon-type.html %}
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+
+        <span class="post-meta">
+          {{ post.date | date: "%b %-d, %Y" }}
+          •
+          {{ post.category }}
+          •
+          {{ post.content | number_of_words }} words
+        </span>
       </li>
     {% endfor %}
   </ul>

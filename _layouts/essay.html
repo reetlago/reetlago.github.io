@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="essay" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
     <p class="post-meta">
@@ -16,6 +16,9 @@ layout: default
     {% if page.reason %}<div class="post-reason">{{ page.reason }}</div>{% endif %}
     {{ content }}
   </div>
+
+  {% if page.tags %}<p>{{ page.tags | sort }}</p>{% endif %}
+  <p>{{ page.content | number_of_words }} words</p>
 
 </article>
 

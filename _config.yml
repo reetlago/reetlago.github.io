@@ -24,3 +24,15 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       author: Reet Lago
+
+# Don't generate these in _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - SETUP
+  - TODO
+
+# Even though it's in the Gemfile, without this the sitemap is not generated
+gems:
+  - jekyll-sitemap

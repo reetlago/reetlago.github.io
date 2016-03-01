@@ -10,5 +10,5 @@ All works are licensed under the <a href="https://creativecommons.org/licenses/b
 
 You can find the source code for this site at
 {% include icon-github.html username="reetlago" %} /
-[reetlago](https://github.com/reetlago/reetlago.github.io)
-All HTML, CSS and JavaScript source code (both Reet's own code and all original <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> code) is licensed under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.
+[reetlago](https://github.com/reetlago/reetlago.github.io).
+All HTML, CSS and JavaScript source code (both the code for this site and all original <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> code) is licensed under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.

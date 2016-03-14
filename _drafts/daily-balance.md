@@ -24,11 +24,10 @@ While yesterday was rather introspective, focus for this second day of the year 
 
 Being open to what that "other" represents is a good first step. Perhaps you're a good listener, you have a vivid imagination or you are naturally curious about things. You can hear words of criticism. You accept failure as part of the learning process. The other is by definition apart from you, but outside influence is often good and helps shape your character.
 
-The other side is not necessarily an opposite; it can also be complimentary like a partnership or team. 
+The "other side" is not necessarily an opposite; it can also be complimentary like a partnership or team. Along the same lines, it isn't necessarily dualistic either: there are many shades between two extremes. In fact, two persons can form a partnership where each person complements the other. 
 Sometimes, the "other" is the unknown
-No need to think in opposites now; in reality, there are many shades between two extremes and not everything is necessarily a dualistic situation. In fact, two persons can form a partnership where each person complements the other. 
 
-words starting with "bi".
+words starting with "bi". bipartisan, binary
 
 partner, binary, even, prime, duality
 Now it's time to think about somebody else. It takes two to do many things. 
@@ -45,6 +44,8 @@ Ideas:
 - micro: ants, insects, etc. 
 
 ## January 4
+
+Quart, "four"boding, 
 
 ## January 5
 
@@ -159,9 +160,10 @@ Valentine's day
 
 ## February 29
 
-Leap year comes around every 4 years, except...
-Think of something you used to do: I haven't done this in years. I haven't talked to so-and-so in years, etc.
+A leap year comes around every 4 years (except for years divisible by 100... except for years also divisible by 400). Today is a good time to think about what you haven't done _in years_. Something you liked doing when you were younger but for one reason or another don't get around of anymore. A forgotten friend you always enjoyed spending time with but due to schedules, distance or the mere passing of time have lost sight of. Or perhaps a memorable place you haven't seen in a long while. The kind of activity that if someone were to ask you what you used to love doing, you'd answer: oh, I _always_ used to... Today, make time to do that again.
 
+Ever increasing responsibilities often change our habits.  
+ 
 ## March 1
 
 ## March 2
@@ -177,6 +179,8 @@ Think of something you used to do: I haven't done this in years. I haven't talke
 ## March 7
 
 ## March 8
+
+International Women's Day
 
 ## March 9
 
@@ -524,6 +528,8 @@ Don't be fooled, there's more going on this day than tricks and ...
 ## August 27
 
 ## August 28
+
+Martin Luther King, Jr.'s "I Have a Dream" speech at the Lincoln Memorial, Washington D.C. 
 
 ## August 29
 

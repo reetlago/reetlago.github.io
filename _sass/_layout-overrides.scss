@@ -77,6 +77,20 @@
 
 
 /**
+ * Quotes
+ */
+.quote .post-content {
+    p::before {
+        content: "\201C";
+    }
+    p::after {
+        content: "\201D";
+    }
+}
+
+
+
+/**
  * Books
  */
 .book .post-content p {

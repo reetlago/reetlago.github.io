@@ -103,7 +103,10 @@
 
 .post-list {
     li {
-        border: 1px solid $grey-color-light;
+        background-image: url('../images/bg.png');
+
+        border: 1px solid $grey-color;
+        border-radius: 10px;
         &:hover {
             background-color: $grey-color-light;
             border: 1px solid $grey-color-dark;

@@ -5,4 +5,10 @@
     span {
         font-style: italic;
     }
+    span::before {
+        content: "\201C";
+    }
+    span::after {
+        content: "\201D";
+    }
 }

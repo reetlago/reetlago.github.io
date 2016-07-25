@@ -7,7 +7,7 @@
 
 # Site settings
 title: Reet Lago
-description: "Writings of Reet Lago: essays, lyrics, novels, poetry, quotes."
+description: "Reet Lago: writer of meaningful things"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://reetlago.github.io" # the base hostname & protocol for your site
 history_url: "https://github.com/reetlago/reetlago.github.io/commits/master/"

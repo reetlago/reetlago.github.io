@@ -1,6 +1,49 @@
+$post-list-item-height: 65px;
+$post-list-item-hover-height: 85px;
+
+@mixin spine-effect($c1a,$c1b,$c1c, $c2a,$c2b,$c2c, $c3a,$c3b,$c3c, $filterStart,$filterEnd) {
+    /* Non-black border makes shadow at bottom look like a fold */
+    border: 1px solid rgb($c3a,$c3b,$c3c);
+
+    /* Old browsers */
+    background: rgb($c1a,$c1b,$c1c);
+
+    /* FF3.6-15 */
+    background: -moz-linear-gradient(
+        45deg,
+        rgba($c1a,$c1b,$c1c,1) 0%,
+        rgba($c2a,$c2b,$c2c,1) 44%,
+        rgba($c3a,$c3b,$c3c,1) 100%
+    );
+
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-linear-gradient(
+        45deg,
+        rgba($c1a,$c1b,$c1c,1) 0%,
+        rgba($c2a,$c2b,$c2c,1) 44%,
+        rgba($c3a,$c3b,$c3c,1) 100%
+    );
+
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(
+        45deg,
+        rgba($c1a,$c1b,$c1c,1) 0%,
+        rgba($c2a,$c2b,$c2c,1) 44%,
+        rgba($c3a,$c3b,$c3c,1) 100%
+    );
+
+    /* IE6-9 fallback on horizontal gradient */
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr='$filterStart',
+        endColorstr='$filterEnd',
+        GradientType=1
+    );
+}
+
+
+
 .post-meta {
     font-family: monospace;
-    text-overflow: ellipsis;
 }
 .post-header .post-meta {
     float: right;
@@ -16,6 +59,7 @@
 .site-footer {
     padding: $spacing-unit / 2 0 0;
 }
+
 .footer-col-1 {
     width: -webkit-calc(60% - (#{$spacing-unit} / 2));
     width:         calc(60% - (#{$spacing-unit} / 2));
@@ -56,7 +100,6 @@
 
 
 
-
 /**
  * Lyrics & Poems
  */
@@ -65,12 +108,12 @@
     font-family: monospace;
     white-space: pre;
 
-    /* Undo margin caused by <p> tag around lines. */
+    /* Undo margin caused by <p> tag around lines */
     p {
         margin: -1em 0;
     }
 
-    /* Undo vertical space caused my newlines before getting to <p> tags. */
+    /* Undo vertical space caused my newlines before getting to <p> tags */
     margin: -3em 0 -2em 0
 }
 
@@ -108,7 +151,7 @@
     padding: 1em;
     width: 33%;
 
-    /* Undo text settings for poems. */
+    /* Undo text settings for poems */
     font-family: initial;
     white-space: normal;
 }
@@ -116,28 +159,143 @@
 
 
 .post-list {
-    li {
-        background-image: url('../images/bg.png');
+    > li {
+        /* Undo standard layout spacing */
+        margin-bottom: 0;
 
-        border: 1px solid $grey-color;
+        /* Allow positioning via JS */
+        position: relative;
+
+        /* Add a drop shadow underneath spines */
+        -webkit-box-shadow: 0 8px 6px -6px black, inset 0 0 4px black;
+           -moz-box-shadow: 0 8px 6px -6px black, inset 0 0 4px black;
+                box-shadow: 0 8px 6px -6px black, inset 0 0 4px black;
+
+        /* Distinguish types of work from one another */
+        &.book {
+            /* http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+            @include spine-effect(169,3,41, 143,2,34, 109,0,25, #a90329,#6d0019);
+        }
+        &.short {
+            /* http://colorzilla.com/gradient-editor/#03a5a5+0,028e8e+44,006868+100 */
+            @include spine-effect(3,165,165, 2,142,142, 0,104,104, #03a5a5,#006868);
+        }
+        &.poem {
+            /* http://colorzilla.com/gradient-editor/#9d03a5+0,8e028e+44,680068+100 */
+            @include spine-effect(157,3,165, 142,2,142, 104,0,104, #9d03a5,#680068);
+        }
+        &.essay {
+            /* http://colorzilla.com/gradient-editor/#eab92d+0,eac004+44,c79810+100 */
+            @include spine-effect(234,185,45, 234,192,4, 199,152,16, #eab92d,#c79810);
+        }
+        &.quote {
+            /* http://colorzilla.com/gradient-editor/#0339a5+0,021e8e+44,00296b+100 */
+            @include spine-effect(3,57,165, 2,30,142, 0,41,107, #0339a5,#00296b);
+        }
+        &.lyric {
+            /* http://colorzilla.com/gradient-editor/#13a503+0,029102+44,006b07+100 */
+            @include spine-effect(19,165,3, 2,145,2, 0,107,7, #13a503,#006b07);
+        }
+
         border-radius: 10px;
+        height: $post-list-item-height;
+
+        .post-link {
+            height: $post-list-item-height;
+            font-size: 16px;
+            padding-left: 24px;
+
+            .title,
+            .post-meta {
+                color: white;
+                display: block;
+                font-size: 24px;
+                padding-top: 13px; /* TODO: make text centered vertically */
+
+                /* TODO: why do big titles wrap on-hover? */
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                -webkit-text-stroke: 1px black;
+                text-shadow:
+                      3px 3px 2px #000,
+                    -1px -1px 2px #000,  
+                     1px -1px 2px #000,
+                     -1px 1px 2px #000,
+                      1px 1px 2px #000;
+            }
+            .post-meta {
+                display: none;
+
+                font-size: 14px;
+                font-weight: bold;
+                padding-top: 0;
+            }
+
+            /* TODO: remove if FontAwesome is not used */
+            .fa {
+                display: none;
+    
+                color: black;
+                float: right;
+                margin: 10px -106px 0 10px;
+                transform: rotate(-90deg);
+                transform-origin: right top 0;
+            }
+
+            .category {
+                transform: rotate(-90deg);
+                transform-origin: right top 0;
+                float: right;
+                width: $post-list-item-height;
+                text-align: center;
+                margin-right: 100px;
+                background-color: black; /*$grey-color;*/
+                color: white;
+                border-top: 2px solid black;
+                border-bottom: 2px solid black;
+                text-transform: uppercase;
+
+                /* This makes the label look less flat */
+                -webkit-text-stroke: 20px black;
+                text-shadow:
+                      3px 3px 20px #000,
+                    -1px -1px 20px #000,  
+                     1px -1px 20px #000,
+                     -1px 1px 20px #000,
+                      1px 1px 20px #000;
+            }
+        }
+
         &:hover {
-            background-color: $grey-color-light;
+            /* Must be below the layout-specific styles */
             border: 1px solid $grey-color-dark;
-        }
 
-        h2 {
-            margin-bottom: 0;
-        }
+            /* Override JavaScript-set value so spine comes forward */
+            z-index: 10000 !important;
 
-        .post-meta {
-            position: relative;
-            bottom: .5em;
-        }
+            /* Add more focus */
+            -webkit-box-shadow: 0 8px 6px -6px black, inset 0 0 10px black;
+               -moz-box-shadow: 0 8px 6px -6px black, inset 0 0 10px black;
+                    box-shadow: 0 8px 6px -6px black, inset 0 0 10px black;
 
-        .fa {
-            float: left;
-            margin: 6px 21px 0 6px;
+            /* Make room for .meta-data */
+            height: $post-list-item-hover-height;
+            bottom: $post-list-item-hover-height/2 - $post-list-item-height/2;
+
+            .post-link {
+                text-decoration: none;
+                height: $post-list-item-hover-height;
+
+                .post-meta {
+                    display: block;
+                }
+
+                .category {
+                    width: $post-list-item-hover-height;
+                }
+            }
         }
     }
 }

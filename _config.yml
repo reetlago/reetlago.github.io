@@ -33,6 +33,7 @@ exclude:
   - SETUP
   - TODO
 
-# Even though it's in the Gemfile, without this the sitemap is not generated
+# Even though already in the Gemfile, these gems must also be declared here
 gems:
+  - jekyll-coffeescript
   - jekyll-sitemap

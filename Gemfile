@@ -5,6 +5,10 @@ source 'https://rubygems.org'
 gem 'jekyll'
 
 group :jekyll_plugins do
+  # CoffeeScript
+  # https://github.com/jekyll/jekyll-coffeescript
+  gem 'jekyll-coffeescript'
+
   # Sitemap generator
   # https://github.com/jekyll/jekyll-sitemap
   gem 'jekyll-sitemap'

@@ -16,8 +16,8 @@ All works are licensed under the [Creative Commons Attribution 4.0 International
 # Source Code
 
 You can find the source code for this site at
-{% include icon-github.html username="reetlago" %} /
-[reetlago](https://github.com/reetlago/reetlago.github.io).
+{% include icon-github.html username="reetlago" repo="reetlago.github.io" %}
+
 All HTML, CSS and JavaScript source code (both the code for this site and all original [Jekyll](http://jekyllrb.com/){:target="_blank"} code) is licensed under the [MIT license](http://opensource.org/licenses/MIT){:target="_blank"}.
 
 # Thanks
@@ -27,6 +27,7 @@ All HTML, CSS and JavaScript source code (both the code for this site and all or
 * Ellipsis: <https://css-tricks.com/almanac/properties/t/text-overflow/>{:target="_blank"}
 * Gradient: <http://www.colorzilla.com/gradient-editor/>{:target="_blank"}
 * Kramdown: <http://kramdown.gettalong.org/syntax.html>{:target="_blank"}
+* Liquid: <https://github.com/Shopify/liquid/wiki/Liquid-for-Designers>{:target="_blank"}
 * RSS icon: <https://www.svgimages.com/rss-07552.html>{:target="_blank"}
 * Sass: <http://sass-lang.com/guide>{:target="_blank"}
 * Table of contents: <http://www.seanbuscay.com/blog/jekyll-toc-markdown/>{:target="_blank"}
@@ -40,12 +41,12 @@ Some tips should you desire your own Jekyll blog:
 1. Pick an uncommon username (check that it's available at GitHub and Twitter for example)
 1. Create email account
 1. Set up GitHub account
-   1. Create GitHub account
-   1. Verify email
-   1. Set up GitHub env on your computer, e.g. <https://gorails.com/setup/ubuntu/14.04#git>{:target="_blank"}
+   1. create GitHub account
+   1. verify email
+   1. set up GitHub env on your computer, e.g. <https://gorails.com/setup/ubuntu/14.04#git>{:target="_blank"}
 1. Set up Twitter account
-   1. Create Twitter account
-   1. Verify email
+   1. create Twitter account
+   1. verify email
 1. Install Ruby, e.g. <https://gorails.com/setup/ubuntu/14.04#ruby>{:target="_blank"}
 1. Install Jekyll, see <http://jekyllrb.com/docs/installation/>{:target="_blank"}
    1. gem install bundler

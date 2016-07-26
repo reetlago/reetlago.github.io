@@ -1,7 +1,14 @@
 $post-list-item-height: 65px;
 $post-list-item-hover-height: 85px;
 
-@mixin spine-effect($c1a,$c1b,$c1c, $c2a,$c2b,$c2c, $c3a,$c3b,$c3c, $filterStart,$filterEnd) {
+@mixin spine-transition() {
+    transition: all 0.1s linear;
+}
+@mixin spine-transition-slow() {
+    transition: all 0.5s linear;
+}
+
+@mixin spine-color($c1a,$c1b,$c1c, $c2a,$c2b,$c2c, $c3a,$c3b,$c3c, $filterStart,$filterEnd) {
     /* Non-black border makes shadow at bottom look like a fold */
     border: 1px solid rgb($c3a,$c3b,$c3c);
 
@@ -171,42 +178,48 @@ $post-list-item-hover-height: 85px;
            -moz-box-shadow: 0 8px 6px -6px black, inset 0 0 4px black;
                 box-shadow: 0 8px 6px -6px black, inset 0 0 4px black;
 
+        @include spine-transition();
+
         /* Distinguish types of work from one another */
         &.book {
             /* http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
-            @include spine-effect(169,3,41, 143,2,34, 109,0,25, #a90329,#6d0019);
+            @include spine-color(169,3,41, 143,2,34, 109,0,25, #a90329,#6d0019);
         }
         &.short {
             /* http://colorzilla.com/gradient-editor/#03a5a5+0,028e8e+44,006868+100 */
-            @include spine-effect(3,165,165, 2,142,142, 0,104,104, #03a5a5,#006868);
+            @include spine-color(3,165,165, 2,142,142, 0,104,104, #03a5a5,#006868);
         }
         &.poem {
             /* http://colorzilla.com/gradient-editor/#9d03a5+0,8e028e+44,680068+100 */
-            @include spine-effect(157,3,165, 142,2,142, 104,0,104, #9d03a5,#680068);
+            @include spine-color(157,3,165, 142,2,142, 104,0,104, #9d03a5,#680068);
         }
         &.essay {
             /* http://colorzilla.com/gradient-editor/#eab92d+0,eac004+44,c79810+100 */
-            @include spine-effect(234,185,45, 234,192,4, 199,152,16, #eab92d,#c79810);
+            @include spine-color(234,185,45, 234,192,4, 199,152,16, #eab92d,#c79810);
         }
         &.quote {
             /* http://colorzilla.com/gradient-editor/#0339a5+0,021e8e+44,00296b+100 */
-            @include spine-effect(3,57,165, 2,30,142, 0,41,107, #0339a5,#00296b);
+            @include spine-color(3,57,165, 2,30,142, 0,41,107, #0339a5,#00296b);
         }
         &.lyric {
             /* http://colorzilla.com/gradient-editor/#13a503+0,029102+44,006b07+100 */
-            @include spine-effect(19,165,3, 2,145,2, 0,107,7, #13a503,#006b07);
+            @include spine-color(19,165,3, 2,145,2, 0,107,7, #13a503,#006b07);
         }
 
         border-radius: 10px;
         height: $post-list-item-height;
 
         .post-link {
+            @include spine-transition();
+
             height: $post-list-item-height;
             font-size: 16px;
             padding-left: 24px;
 
             .title,
             .post-meta {
+                @include spine-transition();
+
                 color: white;
                 display: block;
                 font-size: 24px;
@@ -226,7 +239,7 @@ $post-list-item-hover-height: 85px;
                       1px 1px 2px #000;
             }
             .post-meta {
-                display: none;
+                opacity: 0;
 
                 font-size: 14px;
                 font-weight: bold;
@@ -245,6 +258,8 @@ $post-list-item-hover-height: 85px;
             }
 
             .category {
+                @include spine-transition();
+
                 transform: rotate(-90deg);
                 transform-origin: right top 0;
                 float: right;
@@ -282,8 +297,7 @@ $post-list-item-hover-height: 85px;
 
             /* Make room for .meta-data and "zoom" spine */
             height: $post-list-item-hover-height;
-            margin-left: -20px;
-            width: 105%;
+            margin: -20px;   /* This expands spine in all directions */
 
             .post-link {
                 height: $post-list-item-hover-height;
@@ -291,7 +305,9 @@ $post-list-item-hover-height: 85px;
                 padding-left: 32px;
 
                 .post-meta {
-                    display: block;
+                    /* Take a bit longer to let the other effect finish */
+                    @include spine-transition-slow();
+                    opacity: 1;
                 }
 
                 .category {

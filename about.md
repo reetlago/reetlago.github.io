@@ -16,7 +16,7 @@ All works are licensed under the [Creative Commons Attribution 4.0 International
 # Source Code
 
 You can find the source code for this site at
-{% include icon-github.html username="reetlago" repo="reetlago.github.io" %}
+{% include icon-github.html username="reetlago" repository="reetlago.github.io" %}
 
 All HTML, CSS and JavaScript source code (both the code for this site and all original [Jekyll](http://jekyllrb.com/){:target="_blank"} code) is licensed under the [MIT license](http://opensource.org/licenses/MIT){:target="_blank"}.
 

@@ -280,13 +280,15 @@ $post-list-item-hover-height: 85px;
                -moz-box-shadow: 0 8px 6px -6px black, inset 0 0 10px black;
                     box-shadow: 0 8px 6px -6px black, inset 0 0 10px black;
 
-            /* Make room for .meta-data */
+            /* Make room for .meta-data and "zoom" spine */
             height: $post-list-item-hover-height;
-            bottom: $post-list-item-hover-height/2 - $post-list-item-height/2;
+            margin-left: -20px;
+            width: 105%;
 
             .post-link {
-                text-decoration: none;
                 height: $post-list-item-hover-height;
+                text-decoration: none;
+                padding-left: 32px;
 
                 .post-meta {
                     display: block;

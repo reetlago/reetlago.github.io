@@ -10,7 +10,10 @@ layout: default
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           <span class="category">{{ post.layout }}</span>
 
-          <span class="title">{{ page.author }} &mdash; {{ post.title }}</span>
+          <span class="title">
+            <span class="pre-title">{{ page.author }} &ndash;</span>
+            {{ post.title }}
+          </span>
 
           <span class="post-meta">
             {{ post.date | date: "%b %-d, %Y" }}

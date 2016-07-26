@@ -230,7 +230,6 @@ $post-list-item-hover-height: 85px;
                 overflow: hidden;
                 text-overflow: ellipsis;
 
-                -webkit-text-stroke: 1px black;
                 text-shadow:
                       3px 3px 2px #000,
                     -1px -1px 2px #000,  
@@ -273,7 +272,6 @@ $post-list-item-hover-height: 85px;
                 text-transform: uppercase;
 
                 /* This makes the label look less flat */
-                -webkit-text-stroke: 20px black;
                 text-shadow:
                       3px 3px 20px #000,
                     -1px -1px 20px #000,  

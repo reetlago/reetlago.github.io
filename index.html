@@ -6,7 +6,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li class="{{ post.layout }}">
+      <li class="{{ post.layout }}" data-category="{{ post.category }}">
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           <span class="category">{{ post.layout }}</span>
 
@@ -18,7 +18,7 @@ layout: default
           <span class="post-meta">
             {{ post.date | date: "%b %-d, %Y" }}
             •
-            {% if post.layout != post.category %}
+            {% if post.layout == "book" %}
               {{ post.category }}
               •
             {% endif %}

@@ -19,6 +19,15 @@
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}
+
+        <!-- TODO: how to get a list of the categories?
+             site.categories[0] seems to be another array: [category name, [ posts ]]
+             category | first gives the name, but sort is not possible -->
+        {% capture categories %}{% for category in site.categories %}{{ category | first }},{% endfor %}{% endcapture %}
+        {% assign categories = categories | split: "," | sort %}
+        {% for category in categories %}
+          <a class="page-link" href="javascript:;">{{ category | capitalize }}</a>
+        {% endfor %}
       </div>
     </nav>
 

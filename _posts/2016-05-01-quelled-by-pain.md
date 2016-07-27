@@ -1,6 +1,6 @@
 ---
 layout: quote
-category: quote
+category: quotes
 reason: Realization while nursing a sore tooth.
 ---
 I never knew that an almost inevitable sneeze

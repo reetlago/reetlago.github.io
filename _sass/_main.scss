@@ -39,6 +39,7 @@ $post-list-item-hover-height: 85px;
         rgba($c3a,$c3b,$c3c,1) 100%
     );
 
+    /* TODO: $filterStart and $filterEnd are not replaced! */
     /* IE6-9 fallback on horizontal gradient */
     filter: progid:DXImageTransform.Microsoft.gradient(
         startColorstr='$filterStart',
@@ -60,6 +61,15 @@ $post-list-item-hover-height: 85px;
          1px -1px $blurRadius #000,
          -1px 1px $blurRadius #000,
           1px 1px $blurRadius #000;
+}
+
+
+
+/**
+ * Site header
+ */
+.site-nav {
+    z-index: 20000;
 }
 
 
@@ -139,6 +149,23 @@ $post-list-item-hover-height: 85px;
 
 
 
+.post-categories {
+    margin-left: 0;
+    position: relative;
+    top: -1em;
+    xxborder: 1px solid $grey-color;
+
+    li {
+        display: inline-block;
+        padding: 0 10px;
+        border-right: 1px solid $grey-color;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+}
+
 .post-list {
     > li {
         /* Allow positioning via JS */
@@ -154,7 +181,7 @@ $post-list-item-hover-height: 85px;
             /* http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
             @include spine-color(169,3,41, 143,2,34, 109,0,25, #a90329,#6d0019);
         }
-        &.short {
+        &.not_used {   /* TODO: remove if not used */
             /* http://colorzilla.com/gradient-editor/#03a5a5+0,028e8e+44,006868+100 */
             @include spine-color(3,165,165, 2,142,142, 0,104,104, #03a5a5,#006868);
         }
@@ -170,7 +197,7 @@ $post-list-item-hover-height: 85px;
             /* http://colorzilla.com/gradient-editor/#0339a5+0,021e8e+44,00296b+100 */
             @include spine-color(3,57,165, 2,30,142, 0,41,107, #0339a5,#00296b);
         }
-        &.lyric {
+        &.song {
             /* http://colorzilla.com/gradient-editor/#13a503+0,029102+44,006b07+100 */
             @include spine-color(19,165,3, 2,145,2, 0,107,7, #13a503,#006b07);
         }

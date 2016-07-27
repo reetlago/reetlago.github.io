@@ -1,9 +1,6 @@
 {% if post.layout == "book" %}
   {% assign icon = "book" %}
 {% endif %}
-{% if post.layout == "short" %}
-  {% assign icon = "book" %}
-{% endif %}
 {% if post.layout == "essay" %}
   {% assign icon = "file-text-o" %}
 {% endif %}
@@ -13,7 +10,7 @@
 {% if post.layout == "quote" %}
   {% assign icon = "quote-right" %}
 {% endif %}
-{% if post.layout == "lyric" %}
+{% if post.layout == "song" %}
   {% assign icon = "music" %}
 {% endif %}
 <span class="fa fa-{{ icon }} fa-3x"></span>

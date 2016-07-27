@@ -1,6 +1,7 @@
 ---
-layout: lyric
-category: reggae
+layout: song
+category: lyrics
+tags: [reggae]
 reason: The first two verses were created while driving to work on January 28. The rest on March 13. Use reggae rhythm here, e.g. it *must* be me, it must *beeeeee* me.
 ---
 I moved to Spain

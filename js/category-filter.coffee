@@ -17,12 +17,12 @@ toggleDisplay = (item, show) ->
   style = item.getAttribute 'style'
   value = if show then 'block' else 'none'
 
-  if style.indexOf 'display' >= 0
-    style = style.replace /display: \w+/, 'display: ' + value
+  if style.indexOf('display:') >= 0
+    style = style.replace /display:\s*\w+/, 'display: ' + value
   else
-    style = style + '; display: ' + value
+    style = 'display: ' + value + '; ' + style
 
-  item.setAttribute 'style', style + '; display: ' + value
+  item.setAttribute 'style', style
 
 filter = (event) ->
   target = event.target

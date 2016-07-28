@@ -7,7 +7,7 @@
 
 # Site settings
 title: Reet Lago
-description: "Reet Lago: a writer" # keep short to avoid wrap on small screens
+description: "Reet Lago: writer" # keep short to avoid wrap on small screens
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://reetlago.github.io" # the base hostname & protocol for your site
 history_url: "https://github.com/reetlago/reetlago.github.io/commits/master/"
@@ -30,7 +30,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - SETUP
   - TODO
 
 # Even though already in the Gemfile, these gems must also be declared here

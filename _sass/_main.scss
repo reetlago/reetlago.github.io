@@ -68,6 +68,11 @@ $post-list-item-hover-height: 85px;
 /**
  * Site header
  */
+header .logo {
+    width: 47px;
+    height: 47px;
+}
+
 .site-nav {
     z-index: 20000;
 }

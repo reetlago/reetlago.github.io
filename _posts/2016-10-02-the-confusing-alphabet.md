@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: list
 category: poetry
-title: The Alphabet
+title: The Confusing Alphabet
 reason: Having fun with pronounciation
 ---
 * "A" as in: _age_ or _are_ (the letters "H" or "R")

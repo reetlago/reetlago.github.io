@@ -3,15 +3,16 @@ layout: list
 category: poetry
 title: The Confusing Alphabet
 reason: Having fun with pronounciation
+tags: funny, clever
 ---
 * "A" as in: _age_ or _are_ (the letters "H" or "R")
 * "B" as in: _bee_ (the letter "B")
 * "C" as in: _cue_ (the letter "Q")
 * "D" as in: _double-you_ (the letter "W")
 * "E" as in: _eye_ or _ex_ (the letters "I" or "X")
-* "F" as in: _effort_ (starts with the letter "E")
-* "G" as in: _jesus_ (starts with the letter "J")
-* "H" as in: _aging_ (starts with the letter "A") or _honour_ (sounds like the letter "O")
+* "F" as in: _effort_ (not: starts with the letter "E")
+* "G" as in: _jesus_ (not: starts with the letter "J")
+* "H" as in: _aging_ (not: starts with the letter "A") or _honour_ (sounds like the letter "O")
 * "I" as in: _eye_ (not: starts with the letter "E")
 * "J" as in: _jay_ (the letter "J")
 * "K" as in: _knight_ (sounds like the letter "N")
